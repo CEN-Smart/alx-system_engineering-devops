@@ -1,21 +1,16 @@
 #!/usr/bin/env bash
-# Loops from 1 to 10 and displays:
-#   "bad luck" for the 4th iteration
-#   "good luck" for the 8th iteration
-#   "Holberton School" for all other iterations
-
-count=0
-
-while [ $count -lt 10 ]
+# Prints 'bad luck' on 4th loop and 'good luck' on 8th loop
+index=1
+while ((index < 11))
 do
-  if [ $count -eq 3 ]
+  if ((index == 4))
   then
-    echo "bad luck"
-  elif [ $count -eq 7 ]
+    echo 'bad luck'
+  elif ((index == 8))
   then
-    echo "good luck"
+    echo 'good luck'
   else
-    echo "Holberton School"
+    echo 'Holberton School'
   fi
-  (( count++ ))
+  index=$((index+1))
 done

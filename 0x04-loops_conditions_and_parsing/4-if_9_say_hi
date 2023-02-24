@@ -1,15 +1,12 @@
 #!/usr/bin/env bash
-# Displays "Holberton School" 10 times using a while loop.
-#   On the 9th iteration, displays "Hi" before "Holberton School".
-
-count=0
-
-while [ $count -lt 10 ]
+# Prints 'Hi' on the ninth loop
+index=1
+while ((index <= 10))
 do
-  if [ $count -eq 9 ]
+  echo 'Holberton School'
+  if ((index == 9))
   then
-    echo "Hi"
+    echo 'Hi'
   fi
-  echo "Holberton School"
-  (( count++ ))
+  index=$((index+1))
 done

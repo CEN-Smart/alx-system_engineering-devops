@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
-# Displays "Holberton School" 10 times using an until loop.
-
-count=0
-
-until [ $count -eq 10 ]
+# Until looping 'Holberton School' 10 times
+index=1
+until ((index >= 11))
 do
-  echo "Holberton School"
-  (( count++ ))
+  echo 'Holberton School'
+  index=$((index+1))
 done
